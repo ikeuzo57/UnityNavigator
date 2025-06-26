@@ -1,9 +1,5 @@
 <h1 align="center">Unity Screen Navigator</h1>
 
-[![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)](LICENSE.md)
-
-[日本語ドキュメント(Japanese Documents Available)](README_JA.md)
-
 Library for screen transitions, transition animations, transition history stacking, and screen lifecycle management in Unity's uGUI.
 
 <p align="center">
@@ -82,7 +78,7 @@ You can play the demo scene with the following steps.
 
 1. Clone this repository.
 2. Open and play the following scene.
-    * https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/Demo/Core/DemoEntryPoint.unity
+    * https://https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/Demo/Core/DemoEntryPoint.unity
 
 Please note that some of the images used in this demo are from the following free contents.  
 For more information, including copyright, please refer to the following website.
@@ -99,7 +95,7 @@ For more information, including copyright, please refer to the following website
 1. Open the Package Manager from Window > Package Manager
 2. "+" button > Add package from git URL
 3. Enter the following to install
-   * https://github.com/Haruma-K/UnityScreenNavigator.git?path=/Assets/UnityScreenNavigator
+   * https://https://github.com/ikeuzo57/UnityNavigator.git?path=/Assets/UnityScreenNavigator
 
 <p align="center">
   <img width="80%" src="https://user-images.githubusercontent.com/47441314/118421190-97842b00-b6fb-11eb-9f94-4dc94e82367a.png" alt="Package Manager">
@@ -110,14 +106,14 @@ Or, open Packages/manifest.json and add the following to the dependencies block.
 ```json
 {
     "dependencies": {
-        "com.harumak.unityscreennavigator": "https://github.com/Haruma-K/UnityScreenNavigator.git?path=/Assets/UnityScreenNavigator"
+        "com.harumak.unityscreennavigator": "https://https://github.com/ikeuzo57/UnityNavigator.git?path=/Assets/UnityScreenNavigator"
     }
 }
 ```
 
 If you want to set the target version, specify it like follow.
 
-* https://github.com/Haruma-K/UnityScreenNavigator.git?path=/Assets/UnityScreenNavigator#1.0.0
+* https://https://github.com/ikeuzo57/UnityNavigator.git?path=/Assets/UnityScreenNavigator#1.0.0
 
 ## Basic Screen Transition
 
@@ -351,7 +347,7 @@ public abstract void Setup();
 public abstract void SetTime(float time);
 ```
 
-Please refer to [SimpleTransitionAnimationObject](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Core/Shared/SimpleTransitionAnimationObject.cs) for the practical implementation.
+Please refer to [SimpleTransitionAnimationObject](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Core/Shared/SimpleTransitionAnimationObject.cs) for the practical implementation.
 
 Then, instantiate this Scriptable Object, and assign it to `UnityScreenNavigatorSettings`.  
 You can create `UnityScreenNavigatorSettings` from `Assets > Create > Screen Navigator Settings`.
@@ -374,7 +370,7 @@ You can change the transition animation of this screen by setting the `Asset Typ
 
 Also, you can use the MonoBehaviour instead of the ScriptableObject.  
 In this case, first create a class that extends `TransitionAnimationBehaviour` .  
-Please refer to [SimpleTransitionAnimationBehaviour](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Core/Shared/SimpleTransitionAnimationBehaviour.cs) for the practical implementation.
+Please refer to [SimpleTransitionAnimationBehaviour](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Core/Shared/SimpleTransitionAnimationBehaviour.cs) for the practical implementation.
 
 Then, attach this component and set the `Asset Type` to `Mono Behaviour` and assign the reference to `Animation Behaviour`.
 
@@ -454,7 +450,7 @@ To implement this, first create a class that derived from `TransitionAnimationOb
 Then, refer to the `PartnerRectTransform` property to get the partner screen.  
 If the partner screen does not exist, `PartnerRectTransform` will be null.
 
-Please refer to [CharacterImageModalTransitionAnimation](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/Demo/Scripts/CharacterImageModalTransitionAnimation.cs) in demo for the practical implementation.
+Please refer to [CharacterImageModalTransitionAnimation](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/Demo/Scripts/CharacterImageModalTransitionAnimation.cs) in demo for the practical implementation.
 
 #### Create animation with Timeline
 You can use Timeline to create transition animation.  
@@ -483,7 +479,7 @@ Finally, assign this `Timeline Transition Animation Behaviour` to the `Animation
   <img width="60%" src="https://user-images.githubusercontent.com/47441314/137633821-1fa1a8d6-ca41-49ca-aacf-dcf7f744c0b1.png">
 </p>
 
-In addition, I recommend [UnityUIPlayables](https://github.com/Haruma-K/UnityUIPlayables) to create uGUI animations with Timeline.
+In addition, I recommend [UnityUIPlayables](https://github.com/ikeuzo57/UnityNavigator) to create uGUI animations with Timeline.
 
 <p align="center">
   <img width="60%" src="https://user-images.githubusercontent.com/47441314/113313016-cf9afe80-9345-11eb-9aa9-422c53b5a3f8.gif">
@@ -742,7 +738,7 @@ public abstract AssetLoadHandle<T>
 public abstract void Release(AssetLoadHandle handle);
 ```
 
-Please refer to [ResourcesAssetLoader](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Foundation/AssetLoader/ResourcesAssetLoader.cs) for the practical implementation.  
+Please refer to [ResourcesAssetLoader](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/UnityScreenNavigator/Runtime/Foundation/AssetLoader/ResourcesAssetLoader.cs) for the practical implementation.  
 After create it, assign it's instance to `AssetLoader` property of `UnityScreenNavigatorSettings`.
 
 <p align="center">
@@ -817,7 +813,7 @@ container.Push(pageName, true);
 container.ReleasePreloaded(pageName);
 ```
 
-Please refer to [HomePage in demo](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/Demo/Scripts/HomePage.cs) for the practical implementation.  
+Please refer to [HomePage in demo](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/Demo/Scripts/HomePage.cs) for the practical implementation.  
 When the `Home` page is initialized, the `Shop` page is also loaded and destroyed at the same time.
 
 ## Other Features
@@ -885,7 +881,7 @@ yield return container.Push("BarPage", true);
 yield return container.Pop(true);
 ```
 
-Please refer to [TopPage in demo](https://github.com/Haruma-K/UnityScreenNavigator/blob/master/Assets/Demo/Scripts/TopPage.cs) for the practical implementation.  
+Please refer to [TopPage in demo](https://github.com/ikeuzo57/UnityNavigator/blob/master/Assets/Demo/Scripts/TopPage.cs) for the practical implementation.  
 Transition to the loading page without stacking.
 
 #### Change the backdrop of modals
@@ -986,7 +982,7 @@ https://light11.hatenadiary.com/entry/2022/01/11/193925
 #### How to pass data to each screen
 First, as an example, data is passed to the screen when loading is completed in the demo scene, as shown below.
 
-https://github.com/Haruma-K/UnityScreenNavigator/blob/8a115b1b25ac1d9fcf4b1ab6d5f2c1cd1d915ee5/Assets/Demo/Scripts/CharacterModal.cs#L91
+https://github.com/ikeuzo57/UnityNavigator/blob/8a115b1b25ac1d9fcf4b1ab6d5f2c1cd1d915ee5/Assets/Demo/Scripts/CharacterModal.cs#L91
 
 However, there are many other possible ways to pass data.
 For example, there may be a case where you want to use a DI Container to set data.
@@ -1015,4 +1011,4 @@ This software is released under the MIT License.
 You are free to use it within the scope of the license.  
 However, the following copyright and license notices are required for use.
 
-* https://github.com/Haruma-K/UnityScreenNavigator/blob/master/LICENSE.md
+* https://github.com/ikeuzo57/UnityNavigator/blob/master/LICENSE.md
